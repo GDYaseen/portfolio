@@ -34,7 +34,7 @@ body{
 }
 @font-face {
     font-family: 'Raleway';
-    src: url('Fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+    src: url('../Fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
