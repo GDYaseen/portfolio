@@ -1,0 +1,173 @@
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 25px;
+    /* margin-bottom: 2%; */
+}
+header>svg>g,#menu>g{
+    fill:white;
+}
+header>svg:first-child>g>path:last-child{
+    fill:none;
+    animation: changeColor 1s linear infinite;
+}
+
+
+
+
+
+
+@media (min-width: 900px) {
+    #links{
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 20px;
+    }
+    header>svg{
+        width: 300px;
+        height: auto;
+    }
+    #menu{
+        display: none;
+    }
+    header>label{
+        display: none;
+    }
+    #links>a{
+        position: relative;
+        text-decoration: none;
+        color:#7B8B9D;
+        font-size: large;
+        transition: 0.15s color;
+    }
+    #links>a:hover{
+        text-decoration: none;
+        color:#F3F1F1;
+    }
+    #links>a::after {
+        content: '';
+        width: 0%;
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        height: 2px;
+        background-color: #4cbcc4;
+        transition: all 0.1s;
+    }
+    #links>a:hover::after {
+        width: 100%;
+          left: 0%;
+    }
+}
+@media (max-width:900px) {
+    #links{
+        z-index: 1;
+        display: grid;
+        position: fixed;
+        width: 0px;
+        top:0px;
+        height: 100vh;
+        left:0px;
+        /* background-color: #01001b8f; */
+        background-image: linear-gradient(0deg,#071c46d1,#1d262e);
+        transition: width 0.5s ease-in-out;
+        overflow: hidden;
+        row-gap: 40px;
+        align-content:baseline;
+        padding-top: 140px;
+    }
+    header>svg{
+        width: 200px;
+        height: auto;
+    }
+    label>*,label,header>input{
+        z-index: 2;
+    }
+    #menu{
+        display: block;
+        width: 32px;
+        height: 32px;
+        fill: white;
+        overflow: visible;
+        
+        z-index: 2;
+    }
+    header>label{
+        display: block;
+    }
+    #links>a{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: min-content;
+        text-decoration: none;
+        color:#bec4ca;
+        font-size: larger;
+        padding-left: 20px;
+        font-weight: bold;
+        transition: 0.15s color;
+    }
+}
+
+input[type="checkbox"]:checked+label+#links{
+    width: 100vw;
+}
+input[type="checkbox"]+label>#menu>g>path:first-child{
+    transform-origin: 50% 50%;
+    transform-box:stroke-box;
+    rotate: 0deg;
+       transform: translateY(0%) ;
+    transition: all 0.4s;
+}
+input[type="checkbox"]+label>#menu>g>path:last-child{
+    transform-origin: 50% 50%;
+    transform-box:stroke-box;
+    rotate: 0deg;
+       transform: translateY(0) ;
+      transition: all 0.4s;
+}
+input[type="checkbox"]:checked+label>#menu>g>path:first-child{
+    transform: translateY(-300%) ;
+    rotate: 45deg;
+}
+input[type="checkbox"]:checked+label>#menu>g>path:last-child{
+    rotate: -45deg;
+        transform: translateY(300%) ;
+}
+input[type="checkbox"]:checked+label>#menu>g>path:first-child{
+    transform: translateY(-300%) ;
+    rotate: 45deg;
+}
+@keyframes changeColor {
+    0% { fill: none; }
+    50% { fill: #4cbcc4; }
+    100% { fill: none; }
+}
+@keyframes menuAnimation {
+    0% {
+      
+    }
+    100% {
+        
+    }
+}
+@keyframes menuAnimation2 {
+    0% {
+      
+    }
+    100% {
+        
+    }
+}
+@keyframes reverseMenuAnimation {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 50%;
+    }
+}
+  

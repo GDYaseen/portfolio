@@ -1,0 +1,113 @@
+#Education{
+    height: auto;
+    padding-top: 90px;
+    color: white;
+}
+@media (min-width: 1000px) {
+    #container{
+        height:max-content;
+        width:calc(100% - 1px);
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 0.7s ease-in-out , opacity 0.7s ease-in-out;
+        display: flex;
+        justify-content: center;
+        column-gap: 10rem;
+        position: relative;
+    }
+    #container::before{
+        content: '';
+      position: absolute;
+      top: 0; right: 0; left: 0;
+      width: auto;
+      height: 1px;
+      z-index: -1;
+      margin: -1px; /* Adjust the thickness of the border */
+      background: linear-gradient(90deg,transparent 20%,lightblue 50%,transparent 80%);
+      border-radius: inherit;
+    }
+    .tinyCircle{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 50%;
+        left: 50%;
+        top:-6px;
+        background-color: #070b14;
+    }
+    .timelineElement{
+        width: 12%;
+        display: grid;
+        row-gap: 0px;
+        position: relative;
+        padding-top: 20px;
+        z-index: 1;
+    }
+}
+@media (max-width: 1000px) {
+    #container{
+        height:max-content;
+        width:calc(100% - 1px);
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 0.7s ease-in-out , opacity 0.7s ease-in-out;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        justify-content: stretch;
+        align-items: center;
+        column-gap: 10rem;
+        position: relative;
+    }
+    #container::before{
+        content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 10%;
+      width: 1px;
+      height: auto;
+      z-index: -1;
+      margin: -1px; /* Adjust the thickness of the border */
+      background: linear-gradient(0deg,transparent,lightblue,transparent);
+      border-radius: inherit;
+    }
+    .tinyCircle{
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 50%;
+        top: 40%;
+        justify-self: left;
+        /* left:calc(-10% - 1px); */
+        left:-6px;
+        background-color: #070b14;
+    }
+    .timelineElement{
+        width: 80%;
+        display: grid;
+        row-gap: 0px;
+        position: relative;
+        align-self: center;
+        padding-top: 20px;
+        z-index: 1;
+        text-indent: 10%;
+    }
+}
+.timelineElement>h4,.timelineElement>h5{
+    font-family: 'Montserrat';
+    font-size: 1em;
+}
+.timelineElement>h4:nth-child(3){
+    color: rgb(162, 177, 192);
+    font-weight: normal;
+}
+.timelineElement>h4:nth-child(4),.timelineElement>h5{
+    font-weight: normal;
+}
+.timelineElement>h5{
+    color: #4cbcc4;
+}
+.timelineElement>h4{
+    margin: 0px;
+}
