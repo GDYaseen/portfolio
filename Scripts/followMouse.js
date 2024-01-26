@@ -41,6 +41,8 @@ requestAnimationFrame(updateCirclePosition);
 
 var container = document.getElementById('container');
 var container2 = document.getElementById('Experience');
+var menuInput = document.getElementById('menuInput');
+const menu = document.getElementById('menu');
 window.addEventListener('scroll', function() {
     if(window.scrollY>70){
         container.style.transform = "translateY(0px)";
@@ -56,4 +58,6 @@ window.addEventListener('scroll', function() {
         container.style.transform = "translateY(100px)";
         container.style.opacity=0;
     }
+    menuInput.checked?menu.style.transform = 'translateY(' + window.scrollY + 'px)':null;
+
 });

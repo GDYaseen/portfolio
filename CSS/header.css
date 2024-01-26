@@ -91,7 +91,6 @@ header>svg:first-child>g>path:last-child{
         height: 32px;
         fill: white;
         overflow: visible;
-        
         z-index: 2;
     }
     header>label{
@@ -108,6 +107,9 @@ header>svg:first-child>g>path:last-child{
         font-weight: bold;
         transition: 0.15s color;
     }
+    /* input[type="checkbox"]+label>#menu{
+        
+    } */
 }
 
 input[type="checkbox"]:checked+label+#links{
@@ -135,39 +137,9 @@ input[type="checkbox"]:checked+label>#menu>g>path:last-child{
     rotate: -45deg;
         transform: translateY(300%) ;
 }
-input[type="checkbox"]:checked+label>#menu>g>path:first-child{
-    transform: translateY(-300%) ;
-    rotate: 45deg;
-}
 @keyframes changeColor {
     0% { fill: none; }
     50% { fill: #4cbcc4; }
     100% { fill: none; }
-}
-@keyframes menuAnimation {
-    0% {
-      
-    }
-    100% {
-        
-    }
-}
-@keyframes menuAnimation2 {
-    0% {
-      
-    }
-    100% {
-        
-    }
-}
-@keyframes reverseMenuAnimation {
-    0% {
-        width: 100%;
-        left: 0;
-    }
-    100% {
-        width: 0;
-        left: 50%;
-    }
 }
   
